@@ -1,0 +1,10 @@
+@import "../../../../vendor/filament/filament/resources/css/theme.css";
+
+@config 'tailwind.config.js';
+
+.fi-top-navigation nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 1rem;  
+    padding-right: 1rem;
+}

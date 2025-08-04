@@ -1,0 +1,32 @@
+import { reactive, ref } from "vue";
+
+// Create a reactive store to cache API responses
+export const megaMenuCache = reactive({
+    articles: null,
+    events: null,
+    lowongans: null,
+
+    // Cache expiration timestamps
+    articlesExpiry: null,
+    eventsExpiry: null,
+    lowongansExpiry: null,
+
+    // Cache validity duration in minutes
+    cacheDuration: 15,
+
+    // Check if cache is still valid
+    isValid(key) {
+        const expiryKey = `${key}Expiry`;
+        if (!this[key] || !this[expiryKey]) return false;
+
+        return new Date().getTime() < this[expiryKey];
+    },
+
+    // Set cache with expiration
+    setCache(key, data) {
+        this[key] = data;
+        const expiryKey = `${key}Expiry`;
+        // Set expiration time (current time + cache duration in minutes)
+        this[expiryKey] = new Date().getTime() + this.cacheDuration * 60 * 1000;
+    },
+});
