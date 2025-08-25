@@ -58,7 +58,7 @@ Untuk mempelajari lebih lanjut tentang Laravel dan filament, silakan kunjungi:
 
 ## Keamanan
 
-Jika Anda menemukan celah keamanan dalam aplikasi, silakan kirim email ke [irzasoul12@gmail.com](mailto:irzasoul12@gmail.com).
+Jika Anda menemukan celah keamanan dalam aplikasi, silakan kirim email ke [irzasoul12@gmail.com](mailto:alf.muhammad.ilyas@gmail.com).
 
 ## Lisensi
 
